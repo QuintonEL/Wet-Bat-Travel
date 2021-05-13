@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import MenuBar from './components/MenuBar';
-import SideDrawer from './components/SIdeDrawer';
+import SideBar from './components/SideBar';
 
 function App() {
   return (
     <div className="App">
       <MenuBar />
-      <SideDrawer />
+      <SideBar />
     </div>
   );
 }
