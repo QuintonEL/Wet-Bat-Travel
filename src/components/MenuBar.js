@@ -14,6 +14,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import ChatIcon from '@material-ui/icons/Chat';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import logo from '../WetBatPNG.png';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -173,11 +175,9 @@ export default function PrimarySearchAppBar() {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuIcon />
+            <DashboardIcon fontSize='large' />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Wet Bat
-          </Typography>
+          <img src={logo} alt='Wet Bat Travel' style={{height: 50}}/>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />

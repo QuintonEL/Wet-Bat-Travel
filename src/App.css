@@ -1,0 +1,9 @@
+/* override material-ui colors */
+.MuiListItemIcon-root,
+.MuiListItemText-root {
+  color: #5f6caf !important;
+}
+
+.MuiAppBar-colorPrimary {
+  background-color: #5f6caf !important;
+}

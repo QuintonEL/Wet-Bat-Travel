@@ -8,8 +8,15 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import TocIcon from '@material-ui/icons/Toc';
+import SendIcon from '@material-ui/icons/Send';
+import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
+import TimelineIcon from '@material-ui/icons/Timeline';
+import GroupIcon from '@material-ui/icons/Group';
+import SettingsIcon from '@material-ui/icons/Settings';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import Dashboard from './Dashboard/Dashboard';
 
 const drawerWidth = 240;
@@ -54,21 +61,45 @@ export default function ClippedDrawer() {
         <Toolbar />
         <div className={classes.drawerContainer}>
           <List>
-            {['Home', 'Quotes', 'Leads', 'Tours'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
+            <ListItem button key='Home'>
+              <ListItemIcon> <HomeIcon/></ListItemIcon>
+              <ListItemText primary='Home' />
+            </ListItem>
+            <ListItem button key='Quotes'>
+              <ListItemIcon> <AttachMoneyIcon/></ListItemIcon>
+              <ListItemText primary='Quotes' />
+            </ListItem>
+            <ListItem button key='Leads'>
+              <ListItemIcon> <TocIcon/></ListItemIcon>
+              <ListItemText primary='Leads' />
+            </ListItem>
+            <ListItem button key='Tours'>
+              <ListItemIcon> <SendIcon/></ListItemIcon>
+              <ListItemText primary='Tours' />
+            </ListItem>
           </List>
           <Divider />
           <List>
-            {['Invoices', 'Analytics', 'Team', 'Admin', 'Support'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
+            <ListItem button key='Invoices'>
+                <ListItemIcon> <InsertDriveFileIcon/></ListItemIcon>
+                <ListItemText primary='Invoices' />
               </ListItem>
-            ))}
+              <ListItem button key='Analytics'>
+                <ListItemIcon> <TimelineIcon/></ListItemIcon>
+                <ListItemText primary='Analytics' />
+              </ListItem>
+              <ListItem button key='Team'>
+                <ListItemIcon> <GroupIcon/></ListItemIcon>
+                <ListItemText primary='Team' />
+              </ListItem>
+              <ListItem button key='Admin'>
+                <ListItemIcon> <SettingsIcon/></ListItemIcon>
+                <ListItemText primary='Admin' />
+              </ListItem>
+              <ListItem button key='Support'>
+                <ListItemIcon> <HelpOutlineIcon/></ListItemIcon>
+                <ListItemText primary='Support' />
+              </ListItem>
           </List>
         </div>
       </Drawer>
