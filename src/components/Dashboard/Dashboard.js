@@ -49,7 +49,7 @@ export default function AutoGrid() {
         <Grid item xs>
           <Paper className={classes.paper}><Popular /></Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs style={{maxWidth: '30%'}}>
           <Paper className={classes.paper}><TeamChat /></Paper>
         </Grid>
       </Grid>
