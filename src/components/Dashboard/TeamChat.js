@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
   header: {
     display: 'flex',
     alignItems: 'center',
+    borderBottom: 1,
+    borderBottomColor: 'grey',
+    borderBottomStyle: 'solid',
   },
   rightJustify: {
     marginLeft: 'auto',

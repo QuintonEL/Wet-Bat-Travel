@@ -8,7 +8,6 @@ import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ChatIcon from '@material-ui/icons/Chat';
@@ -22,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     position: 'sticky',
     top: 0,
+    zIndex: 100000,
   },
   menuButton: {
     marginRight: theme.spacing(2),
