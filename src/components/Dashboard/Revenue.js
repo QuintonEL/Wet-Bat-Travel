@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import LineChart from './LineChart';
+import LineChart from './Charts/LineChart';
 
 const useStyles = makeStyles((theme) => ({
   header: {
