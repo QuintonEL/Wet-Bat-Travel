@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import CheckCircleOutlinedIcon from '@material-ui/icons/CheckCircleOutlined';
+import DoughnutChart from './Charts/Doughnut';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -24,10 +25,15 @@ export default function CloseRatios() {
   const classes = useStyles();
 
   return (
-    <div className={classes.header}>
-      <CheckCircleOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
-      <h1 className={classes.text}>Close Ratios</h1>
-      <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
+    <div>
+      <div className={classes.header}>
+        <CheckCircleOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
+        <h1 className={classes.text}>Close Ratios</h1>
+        <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
+      </div>
+      <div>
+        <DoughnutChart/>
+      </div>
     </div>
   )
 }

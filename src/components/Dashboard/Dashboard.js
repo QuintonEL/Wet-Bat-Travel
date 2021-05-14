@@ -55,13 +55,13 @@ export default function AutoGrid() {
       </Grid>
       <Grid container spacing={3}>
         {/* fourth row */}
-        <Grid item xs>
+        <Grid item xs >
           <Paper className={classes.paper}><Revenue /></Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs >
           <Paper className={classes.paper}><Potential /></Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs >
           <Paper className={classes.paper}><CloseRatios /></Paper>
         </Grid>
       </Grid>

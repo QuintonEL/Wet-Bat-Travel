@@ -37,6 +37,7 @@ const options = {
       },
     ],
   },
+  plugins: {legend: false}
 };
 
 const LineChart = () => (

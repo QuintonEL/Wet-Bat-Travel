@@ -31,7 +31,7 @@ const PieChart = () => (
     <Pie data={data} 	
       width={245}
       height={245}
-      options={{ maintainAspectRatio: false, legend: {display: false}}}
+      options={{ maintainAspectRatio: false, plugins: {legend: false}}}
     />
   </>
 );

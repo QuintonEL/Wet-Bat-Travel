@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LineChart from './Charts/LineChart';
+import { Height } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   header: {
