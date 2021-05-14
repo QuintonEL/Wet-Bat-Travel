@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     borderBottom: 1,
-    borderBottomColor: 'grey',
+    borderBottomColor: 'rgba(0, 0, 0, 0.12)',
     borderBottomStyle: 'solid',
   },
   rightJustify: {
@@ -44,7 +44,7 @@ export default function NewLeads() {
         <MailOutlineOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>New Leads</h1>
         <RefreshOutlinedIcon className={classes.rightJustify} fontSize='large'/>
-        <ZoomOutMapIcon fontSize='large'/>
+        <ZoomOutMapIcon fontSize='large' style={{marginLeft: '2%'}}/>
       </div>
       <div>
         <List className={classes.root}>

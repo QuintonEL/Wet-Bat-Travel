@@ -7,7 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
 
-import MapChart from "./MapChart";
+import MapChart from "./Charts/MapChart";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     borderBottom: 1,
-    borderBottomColor: 'grey',
+    borderBottomColor: 'rgba(0, 0, 0, 0.12)',
     borderBottomStyle: 'solid',
   },
   leftAlign: {
     display: 'flex',
-    borderRight: 1,
-    borderRightColor: 'grey',
-    borderRightStyle: 'solid',
+    // borderRight: 1,
+    // borderRightColor: 'rgba(0, 0, 0, 0.12)',
+    // borderRightStyle: 'solid',
   },
   rightJustify: {
     marginLeft: 'auto',

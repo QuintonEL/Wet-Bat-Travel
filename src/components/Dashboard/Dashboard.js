@@ -31,7 +31,7 @@ export default function AutoGrid() {
       <Grid container spacing={3}>
         {/* first row */}
         <Grid item xs={12}>
-          <Paper className={classes.paper}><Welcome /></Paper>
+          <Paper className={classes.paper} style={{padding: 0}}><Welcome /></Paper>
         </Grid>
         {/* second row */}
         <Grid item xs>

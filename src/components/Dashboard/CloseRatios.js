@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     borderBottom: 1,
-    borderBottomColor: 'grey',
+    borderBottomColor: 'rgba(0, 0, 0, 0.12)',
     borderBottomStyle: 'solid',
   },
   rightJustify: {

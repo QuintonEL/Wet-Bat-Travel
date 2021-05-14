@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     borderBottom: 1,
-    borderBottomColor: 'grey',
+    borderBottomColor: 'rgba(0, 0, 0, 0.12)',
     borderBottomStyle: 'solid',
   },
   rightJustify: {
@@ -35,11 +35,11 @@ function createData(id, name, destination, price) {
 }
 
 const rows = [
-  createData('123455678', 'Katty Abcdefghgj', 'VANCOUVER', '$ 1000.00'),
-  createData('123455678', 'Katty Abcdefghgj', 'BEIJING', '$ 1000.00'),
-  createData('123455678', 'Katty Abcdefghgj', 'NEW YORK', '$ 1000.00'),
-  createData('123455678', 'Katty Abcdefghgj', 'ARGENTINA', '$ 1000.00'),
-  createData('123455678', 'Katty Abcdefghgj', 'SOUTH AFRICA', '$ 1000.00'),
+  createData('123455678', 'Katty Abcdefghg', 'VANCOUVER', '$ 1000.00'),
+  createData('123455678', 'Katty Abcdefggj', 'BEIJING', '$ 1000.00'),
+  createData('123455678', 'Katty Abcdeghgj', 'NEW YORK', '$ 1000.00'),
+  createData('123455678', 'Katty Abcefghgj', 'ARGENTINA', '$ 1000.00'),
+  createData('123455678', 'Katty Acdefghgj', 'SOUTH AFRICA', '$ 1000.00'),
 ];
 
 
@@ -52,7 +52,7 @@ export default function PendingQuotes() {
         <RestoreOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>Pending Quotes</h1>
         <RefreshOutlinedIcon className={classes.rightJustify} fontSize='large'/>
-        <ZoomOutMapIcon fontSize='large'/>
+        <ZoomOutMapIcon fontSize='large' style={{marginLeft: '2%'}}/>
       </div>
       <div>
         <TableContainer component={Paper}>
@@ -67,7 +67,7 @@ export default function PendingQuotes() {
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <TableRow key={row.name}>
+                <TableRow  key={row.name}>
                   <TableCell component="th" scope="row">
                     {row.id}
                   </TableCell>
