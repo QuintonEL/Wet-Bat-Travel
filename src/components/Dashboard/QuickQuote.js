@@ -52,7 +52,7 @@ export default function QuickQuote() {
   return (
     <div>
       <div className={classes.header}>
-        <FastForwardOutlinedIcon fontSize='large'/>
+        <FastForwardOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>Quick Quote</h1>
         <ZoomOutMapIcon className={classes.rightJustify} fontSize='large'/>
       </div>

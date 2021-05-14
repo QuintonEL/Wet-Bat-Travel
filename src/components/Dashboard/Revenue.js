@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
+import BarChartIcon from '@material-ui/icons/BarChart';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -24,8 +25,9 @@ export default function Revenue() {
 
   return (
     <div className={classes.header}>
+      <BarChartIcon fontSize='large' style={{fill: '#5bbfba'}}/>
       <h1 className={classes.text}>Revenue</h1>
-      <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
+      <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large' />
     </div>
   )
 }

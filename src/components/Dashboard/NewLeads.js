@@ -41,7 +41,7 @@ export default function NewLeads() {
   return (
     <div>
       <div className={classes.header}>
-        <MailOutlineOutlinedIcon fontSize='large'/>
+        <MailOutlineOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>New Leads</h1>
         <RefreshOutlinedIcon className={classes.rightJustify} fontSize='large'/>
         <ZoomOutMapIcon fontSize='large'/>
@@ -50,7 +50,7 @@ export default function NewLeads() {
         <List className={classes.root}>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              <Avatar alt="Jane Smith" src="/static/images/avatar/1.jpg" />
             </ListItemAvatar>
             <ListItemText
               primary="Jane Smith"
@@ -72,7 +72,7 @@ export default function NewLeads() {
           <Divider variant="inset" component="li" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+              <Avatar alt="John Doe" src="/static/images/avatar/2.jpg" />
             </ListItemAvatar>
             <ListItemText
               primary="John Doe"
@@ -94,7 +94,7 @@ export default function NewLeads() {
           <Divider variant="inset" component="li" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+              <Avatar alt="Remi Watts" src="/static/images/avatar/3.jpg" />
             </ListItemAvatar>
             <ListItemText
               primary="Remi Watts"

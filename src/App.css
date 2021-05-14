@@ -7,3 +7,7 @@
 .MuiAppBar-colorPrimary {
   background-color: #5f6caf !important;
 }
+
+h1 {
+  color: #5f6caf;
+}

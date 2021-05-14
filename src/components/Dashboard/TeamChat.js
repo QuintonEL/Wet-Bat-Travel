@@ -25,7 +25,7 @@ export default function TeamChat() {
 
   return (
     <div className={classes.header}>
-      <ChatBubbleOutlineOutlinedIcon fontSize='large'/>
+      <ChatBubbleOutlineOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
       <h1 className={classes.text}>Team Chat</h1>
       <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
     </div>

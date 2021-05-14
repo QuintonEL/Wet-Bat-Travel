@@ -49,7 +49,7 @@ export default function PendingQuotes() {
   return (
     <div>
       <div className={classes.header}>
-        <RestoreOutlinedIcon fontSize='large'/>
+        <RestoreOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>Pending Quotes</h1>
         <RefreshOutlinedIcon className={classes.rightJustify} fontSize='large'/>
         <ZoomOutMapIcon fontSize='large'/>

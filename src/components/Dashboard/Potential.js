@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
+import PieChartOutlinedIcon from '@material-ui/icons/PieChartOutlined';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -24,6 +25,7 @@ export default function Potential() {
 
   return (
     <div className={classes.header}>
+      <PieChartOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
       <h1 className={classes.text}>Potential</h1>
       <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
     </div>
