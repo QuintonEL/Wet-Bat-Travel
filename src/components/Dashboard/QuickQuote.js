@@ -24,6 +24,11 @@ const useStyles = makeStyles((theme) => ({
     borderBottomColor: 'rgba(0, 0, 0, 0.12)',
     borderBottomStyle: 'solid',
   },
+  input: {
+    "& .MuiFilledInput-root": {
+      background: "rgba(224, 251, 255, 0.47)"
+    }
+  },
   rightJustify: {
     marginLeft: 'auto',
   },
@@ -58,12 +63,13 @@ export default function QuickQuote() {
       </div>
       <div>
         <form className={classes.root} noValidate autoComplete="off">
-          <TextField id="filled-basic" label="From" variant="filled" />
-          <TextField id="filled-basic" label="Destination" variant="filled" />
+          <TextField id="filled-basic" label="From" variant="filled" className={classes.input}/>
+          <TextField id="filled-basic" label="Destination" variant="filled" className={classes.input}/>
           <TextField
             id="date"
             label="Depart Date"
             type="date"
+            className={classes.input}
             variant="filled"
             InputLabelProps={{
               shrink: true,
@@ -73,12 +79,13 @@ export default function QuickQuote() {
             id="date"
             label="Return Date"
             type="date"
+            className={classes.input}
             variant="filled"
             InputLabelProps={{
               shrink: true,
             }}
           />
-          <FormControl variant="filled" className={classes.formControl}>
+          <FormControl variant="filled" className={classes.formControl} className={classes.input}>
             <InputLabel id="people">People</InputLabel>
             <Select
               labelId="people"
@@ -95,8 +102,8 @@ export default function QuickQuote() {
               <MenuItem value={4}>4</MenuItem>
             </Select>
           </FormControl>
-          <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel id="transportation">Transportation</InputLabel>
+          <FormControl variant="filled" className={classes.formControl} className={classes.input}>
+            <InputLabel id="transportation" >Transportation </InputLabel>
             <Select
               labelId="transportation"
               id="transportation-input"
@@ -112,7 +119,7 @@ export default function QuickQuote() {
               <MenuItem value={8}>Train</MenuItem>
             </Select>
           </FormControl>
-          <TextField id="filled-basic" label="Name" variant="filled" />
+          <TextField id="filled-basic" label="Name" variant="filled" className={classes.input}/>
           <Button variant="contained" className={classes.button} disableElevation>
             <b>Create a Quote</b>
           </Button>

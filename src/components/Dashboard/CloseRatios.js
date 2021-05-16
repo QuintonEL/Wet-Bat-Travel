@@ -38,7 +38,7 @@ export default function CloseRatios() {
         <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
       </div>
       <div className={classes.chart}>
-        <DoughnutChart/>
+        <DoughnutChart />
       </div>
     </div>
   )

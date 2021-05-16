@@ -6,16 +6,59 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
-
-import MapChart from "./Charts/MapChart";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import beach from '../../beach.jpg';
+import world from '../../world.png';
 
 
 const useStyles = makeStyles((theme) => ({
-  colorStrip: {
-    width: 100,
+  card: {
+    width: 300,
+  },
+  colorStrip1: {
+    width: 200,
     height: 10,
     backgroundColor: 'blue',
     borderRadius: 22,
+    marginLeft: 10,
+  },
+  colorStrip2: {
+    width: 100,
+    height: 10,
+    backgroundColor: 'yellow',
+    borderRadius: 22,
+    marginLeft: 10,
+  },
+  colorStrip3: {
+    width: 120,
+    height: 10,
+    backgroundColor: 'red',
+    borderRadius: 22,
+    marginLeft: 10,
+  },
+  colorStrip4: {
+    width: 210,
+    height: 10,
+    backgroundColor: 'purple',
+    borderRadius: 22,
+    marginLeft: 10,
+  },
+    colorStrip5: {
+    width: 130,
+    height: 10,
+    backgroundColor: 'green',
+    borderRadius: 22,
+    marginLeft: 10,
+  },
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   header: {
     display: 'flex',
@@ -24,11 +67,11 @@ const useStyles = makeStyles((theme) => ({
     borderBottomColor: 'rgba(0, 0, 0, 0.12)',
     borderBottomStyle: 'solid',
   },
+  media: {
+    height: 140,
+  },
   leftAlign: {
-    display: 'flex',
-    // borderRight: 1,
-    // borderRightColor: 'rgba(0, 0, 0, 0.12)',
-    // borderRightStyle: 'solid',
+    marginRight: 0,
   },
   rightJustify: {
     marginLeft: 'auto',
@@ -38,17 +81,11 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     marginLeft: 10,
-  }
+  },
+  world:{
+    height: 300,
+  },
 }));
-
-function generate(element) {
-  return [0, 1, 2, 3, 4, 5].map((value) =>
-    React.cloneElement(element, {
-      key: value,
-    }),
-  );
-}
-
 
 export default function Popular() {
   const classes = useStyles();
@@ -60,24 +97,67 @@ export default function Popular() {
         <h1 className={classes.text}>Popular Destinations & Packages</h1>
         <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
       </div>
-      <div className={classes.leftAlign}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
-            <div className={classes.demo}>
-              <List>
-                {generate(
-                  <ListItem>
-                    <ListItemText
-                      primary="Lorem ipsum dolor sit"
-                    />
-                    <div className={classes.colorStrip}></div>
-                  </ListItem>,
-                )}
-              </List>
-            </div>
+      <div className={classes.container}>
+        <div className={classes.leftAlign}>
+          <Grid>
+            <Grid >
+              <div className={classes.demo}>
+                <List>
+                    <ListItem>
+                      <ListItemText primary="Lorem ipsum dolor sit" />
+                      <div className={classes.colorStrip1}></div>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemText primary="Lorem ipsum dolor sit" />
+                      <div className={classes.colorStrip2}></div>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemText primary="Lorem ipsum dolor sit" />
+                      <div className={classes.colorStrip3}></div>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemText primary="Lorem ipsum dolor sit" />
+                      <div className={classes.colorStrip4}></div>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemText primary="Lorem ipsum dolor sit" />
+                      <div className={classes.colorStrip5}></div>
+                    </ListItem>
+                </List>
+              </div>
+            </Grid>
           </Grid>
-        </Grid>
-        <MapChart />
+        </div>
+        <div>
+          <img src={world} alt='world' className={classes.world}/>
+        </div>
+        <div>
+          <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={beach}
+                title="Lorem ipsum dolor sit amet dolor sit amet"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2" style={{color: '#5f6caf'}}>
+                  Lorem ipsum dolor sit amet dolor sit amet
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                $500 PER NIGHT
+              </Button>
+              <Button size="small" color="primary">
+                DETAILS
+              </Button>
+            </CardActions>
+          </Card>
+        </div>
       </div>
     </div>
   )
