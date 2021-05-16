@@ -5,6 +5,12 @@ import PieChartOutlinedIcon from '@material-ui/icons/PieChartOutlined';
 import PieChart from './Charts/PieChart';
 
 const useStyles = makeStyles((theme) => ({
+  chart: {
+    height: 260,
+    width: 260,
+    display: 'inline',
+    padding: 10,
+  },
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -32,13 +38,13 @@ export default function Potential() {
         <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
       </div>
       <div style={{display: 'flex'}}>
-        <div>
+        <div className={classes.chart}>
           <PieChart />
         </div>
-        <div>
+        <div className={classes.chart}>
           <PieChart />
         </div>
-        <div>
+        <div className={classes.chart}>
           <PieChart />
         </div>
       </div>

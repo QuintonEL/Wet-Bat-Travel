@@ -5,6 +5,12 @@ import CheckCircleOutlinedIcon from '@material-ui/icons/CheckCircleOutlined';
 import DoughnutChart from './Charts/Doughnut';
 
 const useStyles = makeStyles((theme) => ({
+  chart: {
+    height: 220,
+    width: 220,
+    display: 'inline',
+    padding: 10,
+  },
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -31,7 +37,7 @@ export default function CloseRatios() {
         <h1 className={classes.text}>Close Ratios</h1>
         <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
       </div>
-      <div>
+      <div className={classes.chart}>
         <DoughnutChart/>
       </div>
     </div>

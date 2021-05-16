@@ -3,9 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LineChart from './Charts/LineChart';
-import { Height } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
+  chart: {
+    height: 300,
+    width: 300,
+    display: 'inline',
+    padding: 10,
+  },
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -32,8 +37,8 @@ export default function Revenue() {
         <h1 className={classes.text}>Revenue</h1>
         <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large' />
       </div>
-      <div>
-        <LineChart/>
+      <div className={classes.chart}>
+        <LineChart />
       </div>
     </div>
   )
