@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import QuoteDetails from './QuoteDetails';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -22,15 +23,6 @@ const useStyles = makeStyles((theme) => ({
 const QuotesPage = () => {
   const [quotes, setQuotes] = useState([]);
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const getQuotes = async () => {
     try {
@@ -50,11 +42,11 @@ const QuotesPage = () => {
 
   return (
     <Fragment>
-      <div class="header">
+      <div className="header">
         <h1>Quotes</h1>
         <p>Current travel packages</p>
       </div>
-      <table class="table mt-5 text-center">
+      <table className="table mt-5 text-center">
         <thead>
           <tr>
             <th>Departure</th>
@@ -77,28 +69,9 @@ const QuotesPage = () => {
               <td>{quote.num_travellers}</td>
               <td>{quote.transportation}</td>
               <td>{quote.contact}</td>
-              <td><Button variant="contained" color="primary" onClick={handleOpen}>Details</Button></td>
+              <td><QuoteDetails quote={quote}/></td>
             </tr>
           ))}
-          <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            className={classes.modal}
-            open={open}
-            onClose={handleClose}
-            closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-              timeout: 500,
-            }}
-          >
-            <Fade in={open}>
-              <div className={classes.paper}>
-                <h2 id="transition-modal-title">Details</h2>
-                <p id="transition-modal-description">Some Details</p>
-              </div>
-            </Fade>
-          </Modal>
         </tbody>
       </table>
     </Fragment>
