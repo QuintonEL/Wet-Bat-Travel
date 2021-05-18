@@ -2,6 +2,10 @@
 
 A small full-stack prototype based on the imaginary travel commpany Wet Bat.
 
+The navigation routes that are connected on the side navbar are "Home" and "Quotes". The Quotes page pulls a list of quotes from a local postgreSQL database.
+
+I had a lot of fun with this challange and I hope you enjoy the product. Thank you for your consideration :)
+
 ## Final Product
 
 !["Dashboard"](https://github.com/QuintonEL/Wet-Bat-Travel/blob/master/docs/dashboard.png?raw=true)
