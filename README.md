@@ -1,3 +1,30 @@
+# Launchcode challenge - Wet Bat Travel
+
+A small full-stack prototype based on the imaginary travel commpany Wet Bat.
+
+## Final Product
+
+!["Dashboard"](#)
+!["Dashboard2"](#)
+!["Quotes"](#)
+!["QuoteDetails"](#)
+
+## Dependencies
+
+- Node.js
+- Express
+- EJS
+- ReactJS
+- Material-UI
+- Bootstrap
+- ChartJS
+
+## Getting Started
+
+- Install all dependencies (using `npm install`)
+- Run the web server using `npm start`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
