@@ -16,6 +16,9 @@ Quotes
 !["QuoteDetails"](https://github.com/QuintonEL/Wet-Bat-Travel/blob/master/docs/quoteDetails.png?raw=true)
 Quote Details
 
+!["Api"](https://github.com/QuintonEL/Wet-Bat-Travel/blob/master/docs/server.png?raw=true)
+Local Server
+
 ## Dependencies
 
 - Node.js
@@ -30,7 +33,6 @@ Quote Details
 
 - Install all dependencies (using `npm install`)
 - Run the web server using `npm start`
-
 
 # Getting Started with Create React App
 
