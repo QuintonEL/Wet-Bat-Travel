@@ -4,10 +4,17 @@ A small full-stack prototype based on the imaginary travel commpany Wet Bat.
 
 ## Final Product
 
-!["Dashboard"](#)
-!["Dashboard2"](#)
-!["Quotes"](#)
-!["QuoteDetails"](#)
+!["Dashboard"](https://github.com/QuintonEL/Wet-Bat-Travel/blob/master/docs/dashboard.png?raw=true)
+Dashboard
+
+!["Dashboard2"](https://github.com/QuintonEL/Wet-Bat-Travel/blob/master/docs/dashboard2.png?raw=true)
+Dashboard
+
+!["Quotes"](https://github.com/QuintonEL/Wet-Bat-Travel/blob/master/docs/quotes.png?raw=true)
+Quotes
+
+!["QuoteDetails"](https://github.com/QuintonEL/Wet-Bat-Travel/blob/master/docs/quoteDetails.png?raw=true)
+Quote Details
 
 ## Dependencies
 
