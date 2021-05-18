@@ -11,6 +11,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
+
 const useStyles = makeStyles((theme) => ({
   header: {
     display: 'flex',
@@ -34,6 +35,7 @@ function createData(id, name, destination, price) {
   return { id, name, destination, price };
 }
 
+// the hardcoded data to use for our table
 const rows = [
   createData('123455678', 'Katty Abcdefghg', 'VANCOUVER', '$ 1000.00'),
   createData('123455678', 'Katty Abcdefggj', 'BEIJING', '$ 1000.00'),
@@ -48,13 +50,16 @@ export default function PendingQuotes() {
 
   return (
     <div>
+      {/* the card header */}
       <div className={classes.header}>
         <RestoreOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>Pending Quotes</h1>
         <RefreshOutlinedIcon className={classes.rightJustify} fontSize='large'/>
         <ZoomOutMapIcon fontSize='large' style={{marginLeft: '2%'}}/>
       </div>
+
       <div>
+        {/* the card body containing the table */}
         <TableContainer component={Paper}>
           <Table className={classes.table} aria-label="simple table">
             <TableHead>
@@ -66,6 +71,7 @@ export default function PendingQuotes() {
               </TableRow>
             </TableHead>
             <TableBody>
+              {/* just map through all data and insert into each row */}
               {rows.map((row) => (
                 <TableRow  key={row.name}>
                   <TableCell component="th" scope="row">

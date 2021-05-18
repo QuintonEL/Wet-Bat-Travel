@@ -17,8 +17,12 @@ import TimelineIcon from '@material-ui/icons/Timeline';
 import GroupIcon from '@material-ui/icons/Group';
 import SettingsIcon from '@material-ui/icons/Settings';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-import Dashboard from './Dashboard/Dashboard';
+
+// react router for handing the routing
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+// import the rest of the dashboard components and the quotes page so we can display either one
+import Dashboard from './Dashboard/Dashboard';
 import Quotes from './QuotesPage';
 
 const drawerWidth = 240;
@@ -63,13 +67,16 @@ export default function ClippedDrawer() {
         >
           <Toolbar />
           <div className={classes.drawerContainer}>
+            {/* the list of all sidebar links, only Home and Quotes have functionality */}
             <List>
+              {/* wrap in link tag to route to home url */}
               <Link to='/'>
                 <ListItem button key='Home'>
                   <ListItemIcon> <HomeIcon/></ListItemIcon>
                   <ListItemText primary='Home' />
                 </ListItem>
               </Link>
+              {/* wrap in link tag to route to quotes url */}
               <Link to='/quotes'>
                 <ListItem button key='Quotes'>
                   <ListItemIcon> <AttachMoneyIcon/></ListItemIcon>
@@ -110,6 +117,7 @@ export default function ClippedDrawer() {
             </List>
           </div>
         </Drawer>
+        {/* these routes decide what content to display on the main page body depending on url */}
         <main className={classes.content}>
           <Route path='/' exact component={Dashboard}/>
           <Route path='/quotes' component={Quotes}/>

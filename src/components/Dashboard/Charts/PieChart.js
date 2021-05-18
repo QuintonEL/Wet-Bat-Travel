@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 
+// piechart used for potential revenue
 const data = {
   labels: ['Blue', 'Purple', 'Yellow', 'Orange', 'Green'],
   datasets: [

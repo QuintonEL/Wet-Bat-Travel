@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+
+// import all of the individual components
 import Welcome from './Welcome';
 import QuickQuote from './QuickQuote';
 import PendingQuotes from './PendingQuotes';
@@ -30,11 +32,12 @@ export default function AutoGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        {/* first row */}
+        {/* first row containing welcome header*/}
         <Grid item xs={12}>
           <Paper className={classes.paper} style={{padding: 0}}><Welcome /></Paper>
         </Grid>
-        {/* second row */}
+        
+        {/* second row containing quickquote, pendingquotes, and newleads*/}
         <Grid item xs>
           <Paper className={classes.paper}><QuickQuote /></Paper>
         </Grid>
@@ -45,8 +48,9 @@ export default function AutoGrid() {
           <Paper className={classes.paper}><NewLeads /></Paper>
         </Grid>
       </Grid>
+      
       <Grid container spacing={3}>
-        {/* third row */}
+        {/* third row containing popular and teamchat*/}
         <Grid item xs>
           <Paper className={classes.paper}><Popular /></Paper>
         </Grid>
@@ -54,8 +58,9 @@ export default function AutoGrid() {
           <Paper className={classes.paper}><TeamChat /></Paper>
         </Grid>
       </Grid>
+
       <Grid container spacing={3}>
-        {/* fourth row */}
+        {/* fourth row containing revenue, potential, and closeratios charts*/}
         <Grid item xs >
           <Paper className={classes.paper}><Revenue /></Paper>
         </Grid>

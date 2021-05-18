@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 
+// the quotedetails modals taking in quote as a prop so we can display the data
 const QuoteDetails = ({ quote }) => {
   return <Fragment>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#id${quote.quote_id}`}>

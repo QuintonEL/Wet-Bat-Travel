@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import PieChartOutlinedIcon from '@material-ui/icons/PieChartOutlined';
+
+// import piechart for the body
 import PieChart from './Charts/PieChart';
 
 const useStyles = makeStyles((theme) => ({
@@ -32,12 +34,15 @@ export default function Potential() {
 
   return (
     <div>
+      {/* card header */}
       <div className={classes.header}>
         <PieChartOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>Potential Revenue</h1>
         <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
       </div>
+
       <div style={{display: 'flex'}}>
+        {/* insert three pie charts into body side by side */}
         <div className={classes.chart}>
           <PieChart />
         </div>

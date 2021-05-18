@@ -64,11 +64,14 @@ export default function TeamChat() {
   return (
     <div>
       <div className={classes.header}>
+        {/* the card header */}
         <ChatBubbleOutlineOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>Team Chat</h1>
         <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
       </div>
+
       <div>
+        {/* materialui list for the body containing each conversation */}
         <List className={classes.root}>
           <ListItem alignItems="flex-start">
           <StyledBadge
@@ -79,6 +82,7 @@ export default function TeamChat() {
             }}
             variant="dot"
           >
+            {/* not very reusable but hardcoded names work for this purpose */}
           <Avatar alt="Lou Sanders" src="/static/images/avatar/1.jpg" />
           </StyledBadge>
             <ListItemText

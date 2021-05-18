@@ -13,6 +13,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+
+// import images
 import beach from '../../beach.jpg';
 import world from '../../world.png';
 
@@ -92,13 +94,17 @@ export default function Popular() {
 
   return (
     <div>
+      {/* the card header */}
       <div className={classes.header}>
         <SendOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>Popular Destinations & Packages</h1>
         <MoreVertOutlinedIcon className={classes.rightJustify} fontSize='large'/>
       </div>
+
       <div className={classes.container}>
+        {/* make a flex container for the body */}
         <div className={classes.leftAlign}>
+          {/* this is going to be the left column */}
           <Grid>
             <Grid >
               <div className={classes.demo}>
@@ -128,10 +134,14 @@ export default function Popular() {
             </Grid>
           </Grid>
         </div>
+
         <div>
+          {/* place image of the world in the center column */}
           <img src={world} alt='world' className={classes.world}/>
         </div>
+
         <div>
+          {/* place card in the rightmost column */}
           <Card className={classes.card}>
             <CardActionArea>
               <CardMedia

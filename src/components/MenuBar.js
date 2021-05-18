@@ -13,12 +13,15 @@ import ChatIcon from '@material-ui/icons/Chat';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import DashboardIcon from '@material-ui/icons/Dashboard';
+
+// import the logo for top left of nav
 import logo from '../WetBatPNG.png';
 
 const useStyles = makeStyles((theme) => ({
+  // make sure menubar is sticky and stays positioned at top of page
   grow: {
     flexGrow: 1,
-    position: 'sticky',
+    position: 'sticky', 
     top: 0,
     zIndex: 100000,
   },
@@ -37,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    // position: 'relative',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
     '&:hover': {
@@ -89,6 +91,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
+
+  // some states for opening and closing tray, not currently being used
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -181,7 +185,10 @@ export default function PrimarySearchAppBar() {
           >
             <DashboardIcon fontSize='large' />
           </IconButton>
+          {/* add the company logo left corner */}
           <img src={logo} alt='Wet Bat Travel' style={{height: 50}}/>
+
+          {/* the searchbar */}
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -194,6 +201,8 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
+          
+          {/* notification icons right side */}
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new messages" color="inherit">

@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MoreVertOutlinedIcon from '@material-ui/icons/MoreVertOutlined';
 import CheckCircleOutlinedIcon from '@material-ui/icons/CheckCircleOutlined';
+
+//import the doughnutchart and render in the body of the card
 import DoughnutChart from './Charts/Doughnut';
 
 const useStyles = makeStyles((theme) => ({

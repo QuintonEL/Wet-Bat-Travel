@@ -5,6 +5,7 @@ import QuoteDetails from './QuoteDetails';
 const QuotesPage = () => {
   const [quotes, setQuotes] = useState([]);
 
+  // make async request to api to get info from db
   const getQuotes = async () => {
     try {
 
@@ -17,11 +18,13 @@ const QuotesPage = () => {
     }
   };
 
+  // call the function to make request, ensure to have callback to it doesn't keep repeating request
   useEffect(() => {
     getQuotes();
   }, []);
 
   return (
+
     <Fragment>
       <div className="header">
         <h1>Quotes</h1>
@@ -41,6 +44,7 @@ const QuotesPage = () => {
           </tr>
         </thead>
         <tbody>
+          {/* map through each quote object and display each one of a row of table */}
           {quotes.map(quote => (
             <tr>
               <td>{quote.dep_location}</td>

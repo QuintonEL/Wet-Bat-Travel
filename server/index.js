@@ -19,7 +19,7 @@ app.get('/quotes', async(req, res)=> {
   }
 })
 
-//get a specific quote
+//get a specific quote id
 app.get('/quotes/:id', async(req, res)=> {
   try{
     const { id } = req.params;
@@ -31,13 +31,7 @@ app.get('/quotes/:id', async(req, res)=> {
   }
 })
 
-
-app.get('/', (req,res)=> {
-  res.send('hello');
-})
-
-
-
+//this is the port our restful api will be running on 
 app.listen(3001, () => {
   console.log('running on port 3001');
 })

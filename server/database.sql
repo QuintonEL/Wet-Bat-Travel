@@ -1,5 +1,6 @@
 CREATE DATABASE wetbat;
 
+-- this is the structure for how we are going to store each travel quote
 CREATE TABLE quotes
 (
   quote_id SERIAL PRIMARY KEY,

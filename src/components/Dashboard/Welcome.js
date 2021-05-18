@@ -1,5 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
+
+// import clipart for right side of container
 import clipart from '../../clipart.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -32,24 +34,30 @@ export default function Welcome() {
   const classes = useStyles();
 
   return (
+    // create a flex container so we have all the colums needed side by side
     <div className={classes.container}>
       <div className={classes.column}>
         <h1 style={{color: 'white', textAlign: 'left', fontSize: 40, paddingLeft: '1em'}}>Welcome to your dashboard</h1>
         <p style={{color: 'white', textAlign: 'left', fontSize: 18, paddingLeft: '2em'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
+
+      {/* insert the image on top of the three numbers*/}
       <img src={clipart} alt='clipart' style={{height: '23rem', top: 50, right: '20%', position: 'absolute'}}/>
+      
       <div className={classes.column}>
         <div className={classes.footer}>
           <b className={classes.numbers}>101</b>
           <h2>NEW<br/>LEADS</h2>
         </div>
       </div>
+      
       <div className={classes.column}>
         <div className={classes.footer}>
           <b className={classes.numbers}>35</b>
           <h2>QUOTES<br/>CREATED</h2>
         </div>
       </div>
+      
       <div className={classes.column}>
         <div className={classes.footer}>
           <b className={classes.numbers}>40</b>

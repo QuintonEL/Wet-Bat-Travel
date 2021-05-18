@@ -46,9 +46,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function QuickQuote() {
   const classes = useStyles();
+  
+  // useState for the two dropdowns in order to select an option
   const [people, setPeople] = React.useState('');
   const [transportation, setTransportation] = React.useState('');
 
+  // handlechange when selecting different options
   const handleChange = (event) => {
     setPeople(event.target.value);
     setTransportation(event.target.value);
@@ -57,11 +60,14 @@ export default function QuickQuote() {
   return (
     <div>
       <div className={classes.header}>
+        {/* the card header */}
         <FastForwardOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>Quick Quote</h1>
         <ZoomOutMapIcon className={classes.rightJustify} fontSize='large'/>
       </div>
+
       <div>
+        {/* begin form with textfields for the body */}
         <form className={classes.root} noValidate autoComplete="off">
           <TextField id="filled-basic" label="From" variant="filled" className={classes.input}/>
           <TextField id="filled-basic" label="Destination" variant="filled" className={classes.input}/>

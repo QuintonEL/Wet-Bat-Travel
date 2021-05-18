@@ -1,6 +1,7 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
+// doughnut chart used for close ratios
 const data = {
   labels: ['Purple', 'Yellow'],
   datasets: [

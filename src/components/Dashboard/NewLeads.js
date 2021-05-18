@@ -11,6 +11,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 
+
 const useStyles = makeStyles((theme) => ({
   header: {
     display: 'flex',
@@ -40,13 +41,16 @@ export default function NewLeads() {
 
   return (
     <div>
+      {/* card header */}
       <div className={classes.header}>
         <MailOutlineOutlinedIcon fontSize='large' style={{fill: '#5bbfba'}}/>
         <h1 className={classes.text}>New Leads</h1>
         <RefreshOutlinedIcon className={classes.rightJustify} fontSize='large'/>
         <ZoomOutMapIcon fontSize='large' style={{marginLeft: '2%'}}/>
       </div>
+      
       <div>
+        {/* card body, listing all messages & contacts, not very reusable in this case but it works */}
         <List className={classes.root}>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>

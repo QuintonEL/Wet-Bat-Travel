@@ -1,6 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
+// line chart used for revenue
 const data = {
   labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUNE'],
   datasets: [
