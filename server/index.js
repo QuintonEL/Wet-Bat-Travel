@@ -31,7 +31,8 @@ app.get('/quotes/:id', async(req, res)=> {
   }
 })
 
-//this is the port our restful api will be running on 
-app.listen(3001, () => {
-  console.log('running on port 3001');
-})
+//this is the port our restful api will be running on configured so it can be deployed as well
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.warn(`App listening on http://localhost:${PORT}`);
+});
