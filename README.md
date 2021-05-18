@@ -27,7 +27,6 @@ Local Server
 
 - Node.js
 - Express
-- EJS
 - ReactJS
 - Material-UI
 - Bootstrap
